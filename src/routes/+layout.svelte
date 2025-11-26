@@ -16,12 +16,36 @@
 		<h1 class="title">
 			Real World Economy
 		</h1>
-		<aside class="menu">
-			<a href="/">home</a>
-			<a href="/car">cars</a>
-			<a href="/model">models</a>
-			<a href="/about">about</a>
-		</aside>
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="/">Real World Economy</a>
+
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+    				<span aria-hidden="true"></span>
+      				<span aria-hidden="true"></span>
+      				<span aria-hidden="true"></span>
+    			</a>
+			</div>
+
+			<div class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/car">
+						Cars
+					</a>
+
+					<a class="navbar-item" href="/model">
+						Models
+					</a>
+				</div>
+			</div>
+
+			<div class="navbar-end">
+					<a class="navbar-item" href="/about">
+						About
+					</a> 
+			</div>
+		</nav>
 
 		{@render children()}
 	</div>

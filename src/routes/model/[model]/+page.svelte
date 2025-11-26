@@ -4,6 +4,8 @@
 
 <h2 class="subtitle">Model</h2>
 
+<div class="box">
+
 <div class="field">
     <label class="label">Year</label>
     <div class="control">
@@ -23,4 +25,6 @@
     <div class="control">
         <input class="input" value="{data.model.name}" />
     </div>
+</div>
+
 </div>

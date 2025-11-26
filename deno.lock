@@ -1,8 +1,6 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@std/assert@1": "1.0.16",
-    "jsr:@std/internal@^1.0.12": "1.0.12",
     "npm:@eslint/compat@^1.4.0": "1.4.1_eslint@9.39.1",
     "npm:@eslint/js@^9.39.1": "9.39.1",
     "npm:@sveltejs/adapter-static@^3.0.10": "3.0.10_@sveltejs+kit@2.49.0__@sveltejs+vite-plugin-svelte@6.2.1___svelte@5.43.14____acorn@8.15.0___vite@7.2.4____@types+node@24.10.1____picomatch@4.0.3___@types+node@24.10.1__svelte@5.43.14___acorn@8.15.0__vite@7.2.4___@types+node@24.10.1___picomatch@4.0.3__acorn@8.15.0__@types+node@24.10.1_@sveltejs+vite-plugin-svelte@6.2.1__svelte@5.43.14___acorn@8.15.0__vite@7.2.4___@types+node@24.10.1___picomatch@4.0.3__@types+node@24.10.1_svelte@5.43.14__acorn@8.15.0_vite@7.2.4__@types+node@24.10.1__picomatch@4.0.3_@types+node@24.10.1",
@@ -19,17 +17,6 @@
     "npm:typescript-eslint@^8.47.0": "8.47.0_eslint@9.39.1_typescript@5.9.3_@typescript-eslint+parser@8.47.0__eslint@9.39.1__typescript@5.9.3",
     "npm:typescript@^5.9.3": "5.9.3",
     "npm:vite@^7.2.2": "7.2.4_@types+node@24.10.1_picomatch@4.0.3"
-  },
-  "jsr": {
-    "@std/assert@1.0.16": {
-      "integrity": "6a7272ed1eaa77defe76e5ff63ca705d9c495077e2d5fd0126d2b53fc5bd6532",
-      "dependencies": [
-        "jsr:@std/internal"
-      ]
-    },
-    "@std/internal@1.0.12": {
-      "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
-    }
   },
   "npm": {
     "@esbuild/aix-ppc64@0.25.12": {
@@ -1401,9 +1388,6 @@
     }
   },
   "workspace": {
-    "dependencies": [
-      "jsr:@std/assert@1"
-    ],
     "packageJson": {
       "dependencies": [
         "npm:@eslint/compat@^1.4.0",

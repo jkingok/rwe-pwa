@@ -2,8 +2,6 @@
     let { data } = $props();
 </script>
 
-<h1>Real World Economy</h1>
-
 <h2>Car</h2>
 <h3>Registration</h3>
 <div>{data.car.registration}</div>

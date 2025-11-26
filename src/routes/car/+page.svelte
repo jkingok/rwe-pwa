@@ -2,9 +2,7 @@
     let { data } = $props();
 </script>
 
-<h1>Real World Economy</h1>
-
-<h2>All Cars</h2>
+<h2 class="subtitle">All Cars</h2>
 
 <ul>
     {#each data.cars as { car, registration }}

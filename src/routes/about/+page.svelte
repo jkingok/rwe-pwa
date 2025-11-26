@@ -1,5 +1,3 @@
-<h1>Real World Economy</h1>
-
 <p>Track the fuel economy of car models as reported by drivers
 in the real world here.</p>
 <p>This is a test app to practice using modern web techniques.</p>

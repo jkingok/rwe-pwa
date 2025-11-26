@@ -2,12 +2,25 @@
     let { data } = $props();
 </script>
 
-<h1>Real World Economy</h1>
+<h2 class="subtitle">Model</h2>
 
-<h2>Model</h2>
-<h3>Year</h3>
-<div>{data.model.year}</div>
-<h3>Manufacturer</h3>
-<div>{data.model.manufacturer}</div>
-<h3>Name</h3>
-<div>{data.model.name}</div>
+<div class="field">
+    <label class="label">Year</label>
+    <div class="control">
+        <input class="input" value="{data.model.year}" />
+    </div>
+</div>
+
+<div class="field">
+    <label class="label">Manufacturer</label>
+    <div class="control">
+        <input class="input" value="{data.model.manufacturer}" />
+    </div>
+</div>
+
+<div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+        <input class="input" value="{data.model.name}" />
+    </div>
+</div>

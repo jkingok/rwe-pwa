@@ -2,9 +2,7 @@
     let { data } = $props();
 </script>
 
-<h1>Real World Economy</h1>
-
-<h2>All Models</h2>
+<h2 class="subtitle">All Models</h2>
 
 <ul>
     {#each data.models as { model, year, manufacturer, name }}

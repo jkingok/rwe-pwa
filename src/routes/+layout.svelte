@@ -10,6 +10,8 @@
 
 <nav>
 	<a href="/">home</a>
+	<a href="/car">cars</a>
+	<a href="/model">models</a>
 	<a href="/about">about</a>
 </nav>
 

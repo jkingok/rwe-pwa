@@ -1,12 +1,17 @@
-import { models } from './data.ts';
+import type { PageServerLoad } from './$types';
 
-export const load = (async () => {
+import type { Model } from '$lib/types.ts';
+import { models } from '$lib/data.ts';
+
+type ItemParams = {
+    models: Model[]; // Models out
+}
+
+export const load: PageServerLoad<ItemParams> = ({}) => {
     return {
         models: models.map((model, index) => ({
-             model: index, 
-             year: model.year,
-             manufacturer: model.manufacturer,
-             name: model.name
+             id: index, 
+             ...model
         }))
     };
-});
+};

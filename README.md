@@ -20,7 +20,7 @@ it's better to deal with a PWA first.
 ## Progress
 
 Nothing significant so far, just the boilerplate and the mobile
-development environment
+development environment.
 
 ## Development
 
@@ -37,6 +37,10 @@ Linux container. To get SFTP you need to `sudo apt install openssh-sftp-server`
 and set it to a higher port `echo 2222 | sudo tee /etc/ssh/sshd_config.d/port.conf`,
 and then generate a key `ssh-keygen -f /mnt/shared/droid_key && cat /mnt/shared/droid_key.pub | tee -a ~/.ssh/authorized_keys`.
 
+*While that works things got complicated fast in terms of typing* - **GBoard** is fine but I probably need
+a better keyboard, and a bigger screen. So I'm *also* using my **Chromebook** via the Debian Linux environment
+and **Visual Studio Code**. Similar setup to the above applies.
+
 ## Plan
 
 I like being able to make a PWA on my phone so we'll start with
@@ -44,6 +48,10 @@ tracking your own car privately.
 
 Therefore we'll be using `localStorage` for now, but we will need
 an import-export backup scheme, possibly via QR code.
+
+I have started by following the *Basic Svelte* and *Basic SvelteKit* tutorials and attempting
+to follow along with *Typescript*. Therefore I have a basic **typed** in-memory data store with defaults.
+
 
 ## Data Model
 
@@ -58,6 +66,10 @@ Fuel Receipts
 Snapshots of Trip Computers the show Fuel Consumption
 
 Comments on conditions of particular trips
+
+*Essentially need to be able to make list and edit pages for all of these things.*
+
+All built-in data are dummies (or "mocks").
 
 ## Ideas
 

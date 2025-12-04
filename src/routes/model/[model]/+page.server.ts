@@ -1,14 +1,23 @@
 import { error } from '@sveltejs/kit';
-import { models } from '../data.ts';
+import type { PageServerLoad } from './$types';
 
-export function load({ params }) {
-    if (params.model >= 0 && params.model < models.length) {
-        const model = models[params.model];
+import type { Model } from '$lib/types.ts';
+import { models } from '$lib/data.ts';
 
-        return {
-            model
-        };
-    } else {
-        error(404);
+type ItemParams = {
+    model: string | Model; // string in, Model out
+}
+
+export const load: PageServerLoad<ItemParams> = ({ params }) => {
+    const modelId = Number(params.model);
+
+    if (isNaN(modelId) || modelId < 0 || modelId >= models.length) {
+        throw error(404, 'Invalid model ID.');
     }
+
+    let model = {
+        ...models[modelId]
+    };
+
+    return { model };
 }

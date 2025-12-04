@@ -1,10 +1,17 @@
-import { cars } from './data.ts';
+import type { PageServerLoad } from './$types';
 
-export const load = (async () => {
+import type { Car } from '$lib/types.ts';
+import { cars } from '$lib/data.ts';
+
+type ItemParams = {
+    cars: Car[]; // Cars out
+}
+
+export const load: PageServerLoad<ItemParams> = ({}) => {
     return {
         cars: cars.map((car, index) => ({
-             car: index, 
-             registration: car.registration
+             id: index, 
+             ...car
         }))
     };
-});
+};

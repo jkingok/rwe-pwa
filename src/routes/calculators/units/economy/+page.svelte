@@ -67,10 +67,6 @@
     </label>
 </div>
 
-</div>
-
-<div class="box">
-
 <div class="field">
     <label class="label">
         To unit:&nbsp;
@@ -84,9 +80,19 @@
     </label>
 </div>
 
+</div>
+
+{#if unitin.id !== unitout.id}
+    {#if directions[unitmapped] === divide && input === 0}
+        <div class="notification is-danger">
+            Conversion is invalid while the input is zero!
+        </div>
+    {:else}
+<div class="box">
+
 <div class="field">
     <label class="label">
-        Converted value:&nbsp;
+        Value converted:&nbsp;
         <div class="control">
             <input class="input" type="number" value={
                 directions[unitmapped] === multiply 
@@ -94,9 +100,16 @@
                     : ratios[(unitin.id - 1) * 3 + unitout.id - 1] / input
             } readonly />
         </div>
+        {unitout.text}
     </label>
 </div>
 
 </div>
+    {/if}
+{:else}
+<div class="notification is-warning">
+    Please select a different unit from and to in order to perform a conversion.
+</div>
+{/if}
 
 </form>

@@ -3,6 +3,8 @@
 	import 'bulma/css/bulma.css'
 
 	let { children } = $props();
+
+	let burgerActive = $state(false);
 </script>
 
 <svelte:head>
@@ -16,11 +18,14 @@
 		<h1 class="title">
 			Real World Economy
 		</h1>
-		<nav class="navbar" role="navigation" aria-label="main navigation">
+		<nav class="navbar" aria-label="main navigation">
 			<div class="navbar-brand">
 				<a class="navbar-item" href="/">Real World Economy</a>
 
-				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<a role="button" class={["navbar-burger", burgerActive && 'is-active']} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+					onclick={() => burgerActive = !burgerActive}
+					href="#top"
+					>
 					<span aria-hidden="true"></span>
     				<span aria-hidden="true"></span>
       				<span aria-hidden="true"></span>
@@ -28,7 +33,7 @@
     			</a>
 			</div>
 
-			<div class="navbar-menu">
+			<div class={["navbar-menu", burgerActive && 'is-active']}>
 				<div class="navbar-start">
 					<a class="navbar-item" href="/car">
 						Cars
@@ -37,6 +42,26 @@
 					<a class="navbar-item" href="/model">
 						Models
 					</a>
+
+					<div class="navbar-item has-dropdown is-hoverable">
+        				<a class="navbar-link" href="#top">
+							Calculators
+        				</a>
+
+						<div class="navbar-dropdown">
+							<div class="navbar-item has-dropdown is-hoverable">
+          						<div class="navbar-item">
+            						Unit Conversions
+								</div>
+
+								<a class="navbar-item" href="/calculators/units/economy">
+									Fuel Economy
+								</a>
+
+								<hr class="navbar-divider" />
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 

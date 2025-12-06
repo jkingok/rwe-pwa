@@ -2,13 +2,17 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import 'bulma/css/bulma.css'
 
+	import { showNotification } from '$lib/notifications';
+
 	let { children } = $props();
 
 	let burgerActive = $state(false);
+
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<link rel="manifest" href="/manifest.webmanifest" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Real World Economy</title>
 </svelte:head>
@@ -71,6 +75,8 @@
 					</a> 
 			</div>
 		</nav>
+
+		<div id="notificationContainer"></div>
 
 		{@render children()}
 	</div>
